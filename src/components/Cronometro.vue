@@ -1,6 +1,6 @@
 <template>
     <section>
-        <strong>{{tempoDecorrido}}</strong>
+        <strong :class="{ 'display': !isDone }">{{tempoDecorrido}}</strong>
     </section>
 </template>
 
@@ -13,6 +13,10 @@
             tempoTotal: {
                 type: Number,
                 default: 0
+            },
+            isDone: {
+                type: Boolean,
+                default: false
             }
         },
         computed: {
@@ -22,3 +26,9 @@
         }
     })
 </script>
+
+<style scoped>
+    .display {
+        color: var(--texto-primario);
+    }
+</style>

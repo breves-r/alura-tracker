@@ -6,7 +6,7 @@
             </div>
 
             <div class="column">
-                <Cronometro :tempoTotal="tarefa.duracao"/>
+                <Cronometro :tempoTotal="tarefa.duracao" :isDone="true"/>
             </div>
         </div>
     </Box>
